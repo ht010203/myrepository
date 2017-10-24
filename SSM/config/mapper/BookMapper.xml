@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.smarty.space.user.mapper.BookMapper">
+	<select id="queryById" parameterType="long" resultType="Book">
+	select bookid,name,number from book where bookid = #{value}
+	</select>
+	
+	<select id="queryAll" resultType="Book">
+		select bookid,name,number from book 
+	</select>
+	
+	
+</mapper>
